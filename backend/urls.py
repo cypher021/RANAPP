@@ -10,10 +10,12 @@ from django.conf.urls.static import static
 
 route = routers.DefaultRouter()
 route.register('Services', ServicesViews)
-route.register('Projects', ProgramsViews)
-route.register('Programs', ProjectsViews)
+route.register('Programs', ProgramsViews)
+route.register('Projects', ProjectsViews)
 route.register('Events', EventsViews)
-
+route.register('Tenures', TenureViews)
+route.register('Category', CategoryViews)
+route.register('Membership', MembershipViews)
 
 
 urlpatterns = [

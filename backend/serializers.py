@@ -1,26 +1,26 @@
 from rest_framework import serializers
-from .models import ProjectDetails , EventDetails , ServiceDetails , ProgramDetails
+from .models import Categorymember, ProjectDetail , EventDetail , ServiceDetail , ProgramDetail, TenureDetail, membership
 
 
 
 class Projectserializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
-        model = ProjectDetails
+        model = ProjectDetail
         fields = '__all__'
 
 
 class Eventserializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
-        model = EventDetails
+        model = EventDetail
         fields = '__all__'
 
 
 class Serviceserializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
-        model = ServiceDetails
+        model = ServiceDetail
         fields = '__all__'
 
 
@@ -28,5 +28,24 @@ class Serviceserializer(serializers.HyperlinkedModelSerializer):
 class Programserializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
-        model = ProgramDetails
+        model = ProgramDetail
+        fields = '__all__'
+
+
+class Tenureserializer(serializers.HyperlinkedModelSerializer):
+
+    class Meta:
+        model = TenureDetail
+        fields = '__all__'
+class Categoryserializer(serializers.HyperlinkedModelSerializer):
+
+    class Meta:
+        model = Categorymember
+        fields = '__all__'
+
+
+class Memberserializer(serializers.HyperlinkedModelSerializer):
+
+    class Meta:
+        model = membership
         fields = '__all__'

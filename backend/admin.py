@@ -1,8 +1,8 @@
 from django.contrib import admin
-from .models import ProgramDetails, EventDetails , ProjectDetails , ServiceDetails
+from .models import ProgramDetail, EventDetail , ProjectDetail , ServiceDetail
 # Register your models here.
-admin.site.register(ProgramDetails)
-admin.site.register(EventDetails)
-admin.site.register(ProjectDetails)
-admin.site.register(ServiceDetails)
+admin.site.register(ProgramDetail)
+admin.site.register(EventDetail)
+admin.site.register(ProjectDetail)
+admin.site.register(ServiceDetail)
 
