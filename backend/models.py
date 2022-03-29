@@ -6,6 +6,7 @@ Type_Choices=(
 )
 # Create your models here.
 class ProgramDetail(models.Model):
+    ProgramID = models.AutoField(primary_key=True)
     ProgramName= models.CharField(max_length=100)
     Objectives= models.TextField(blank=False , help_text='Enter in bullet points')
     Goals= models.TextField(blank=False,help_text='Enter in bullet points')
@@ -21,6 +22,7 @@ class ProgramDetail(models.Model):
 
 
 class EventDetail(models.Model):
+    EventID = models.AutoField(primary_key=True)
     EventName= models.CharField(max_length=100)
     EventDescription= models.TextField(blank=False)
     Eventdate=models.DateField(blank=False)
@@ -33,6 +35,7 @@ class EventDetail(models.Model):
         return self.EventName
 
 class ServiceDetail(models.Model):
+    ServicesID = models.AutoField(primary_key=True)
     ServiceName= models.CharField(max_length=100)
     ServiceDescription= models.TextField(blank=False)
     Servicedate=models.DateField(blank=False)
@@ -46,6 +49,7 @@ class ServiceDetail(models.Model):
         return self.ServiceName
 
 class ProjectDetail(models.Model):
+    ProjectID = models.AutoField(primary_key=True)
     ProjectName= models.CharField(max_length=100,verbose_name = "Project Name")
     ProjectDescription= models.TextField(blank=True, null= True ,verbose_name = "Description")
     Projectdate=models.DateField(blank=True,verbose_name = "Date")
@@ -79,6 +83,7 @@ class Categorymember(models.Model):
 
        
 class membership(models.Model):
+    MembershipID = models.AutoField(primary_key=True)
     name = models.CharField(verbose_name="Membername",max_length=100)
     pic = models.ImageField(verbose_name="Member photo" ,upload_to='images/membersphotos/', height_field=None, width_field=None,default='default.jpg',help_text= 'The size must be --- and the resoultion is ---' )
     MembershipYear = models.ForeignKey( TenureDetail , on_delete= models.CASCADE )

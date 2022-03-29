@@ -1,7 +1,7 @@
 from rest_framework import viewsets
 
 # from backend.forms import membershipform
-from rest_framework.authentication imporokenAuthentication
+from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
 from .serializers import Categoryserializer, Eventserializer, Memberserializer, Programserializer, Projectserializer, Serviceserializer, Tenureserializer
 from.models import Categorymember, ServiceDetail , ProjectDetail ,ProgramDetail ,EventDetail, TenureDetail, membership
