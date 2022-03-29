@@ -6,3 +6,6 @@ admin.site.register(EventDetail)
 admin.site.register(ProjectDetail)
 admin.site.register(ServiceDetail)
 
+from rest_framework.authtoken.admin import TokenAdmin
+
+TokenAdmin.raw_id_fields = ['user']

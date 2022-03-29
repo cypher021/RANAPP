@@ -65,7 +65,7 @@ class ProjectDetail(models.Model):
 
 
 class TenureDetail(models.Model):
-    Year = models.CharField(verbose_name="for eg: 2021-22" , max_length=8)
+    Year = models.CharField(verbose_name="year",help_text="for eg: 2021-22" , max_length=8)
 
     def __str__(self):
         return self.Year 

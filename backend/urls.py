@@ -4,7 +4,7 @@ from rest_framework import routers
 from .views import *
 from django.conf.urls.static import static
 
-
+from rest_framework.authtoken.views import obtain_auth_token
 
 
 
@@ -20,7 +20,7 @@ route.register('Membership', MembershipViews)
 
 urlpatterns = [
     path('', include(route.urls)),
-
+     path('api/token/auth/', CustomAuthToken.as_view())
 
 ]
 
